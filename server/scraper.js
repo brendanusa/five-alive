@@ -5,7 +5,6 @@ const scrape = () => {
 
   url = 'https://www.sports-reference.com/cbb/seasons/2018-ratings.html';
   
-
   axios.get(url)
     .then(res => {
       let $ = cheerio.load(res.data);

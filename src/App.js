@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+const axios = require('axios');
+
 
 class App extends Component {
+
+  componentDidMount() {
+
+    let context = this;
+
+    axios.get('/scrape', (data) => {
+    // context.setState({
+    //   userId: data.id,
+    //   currentUser: data.username
+    // });
+    console.log(data)
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,6 +29,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;
