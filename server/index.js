@@ -7,7 +7,7 @@ const scraper = require('./scraper');
 const app = express();
 
 app.get('/scrape', (req, res) => {
-  return scraper.scrape();
+  scraper.scrape();
 })
 
 const test = () => {
